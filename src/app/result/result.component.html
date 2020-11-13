@@ -1,0 +1,41 @@
+<div class="main">
+
+  <div>
+    <app-header></app-header>
+  </div>
+
+  <div class="container-fluid mb-5">
+
+    <div class="fab-button-container">
+      <button (click)="clearSession()" mat-fab color="warn">
+        <span>Exit</span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="d-flex justify-content-center mt-3">
+        <span class="greetings">Hi {{name}}! Distribution of top 50 contibuters are :</span>
+      </div>
+
+      <div class="justify-content-center d-flex">
+        <div class="p-5 m-5 w-75 h-75">
+          <canvas id="myChart" width="500" height="500"></canvas>
+      </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <button *ngIf="!showDetails" (click)="showDetails=true" mat-flat-button color="primary">Click Here To Know More About The Technologies Used</button>
+        <button *ngIf="showDetails" (click)="showDetails=false" mat-flat-button color="primary">Hide Details</button>
+      </div>
+      <div class="d-flex justify-content-center mt-3 p-3" *ngIf="showDetails">
+        <div>
+          <h2>Technologies Used</h2>
+          <h3>Front-End: Angular 10</h3>
+          <h3>Charts: Charts.JS</h3>
+          <h3>Backend: NodeJS (ExpressJS Framework)</h3>
+          <h3>Data sourse: GraphQL</h3>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,10 @@
+.greetings{
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: large;
+}
+
+.fab-button-container{
+  position: sticky;top: 10px;margin-top: 10px;float: right;
+}

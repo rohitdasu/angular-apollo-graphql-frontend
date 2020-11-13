@@ -1,0 +1,37 @@
+<div class="h-100">
+
+  <app-header></app-header>
+
+  <div class="container-fluid">
+    <div class="container">
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="row justify-content-center w-75 mt-5">
+          <mat-card class="w-75">
+            <div>
+              <span class="d-block form-header text-center">Welcome To The App</span>
+              <span class="text-center d-block mt-3">Please fill below field(s)</span>
+            </div>
+            <div class="text-center mt-5 mb-5">
+
+              <div>
+                <mat-form-field class="w-50">
+                  <mat-label>Enter Your Name</mat-label>
+                  <input matInput type="text" [(ngModel)]="name">
+                  <button mat-button *ngIf="name" matSuffix mat-icon-button aria-label="Clear" (click)="name=''">
+                    <mat-icon>close</mat-icon>
+                  </button>
+                </mat-form-field>
+              </div>
+
+              <div>
+                <button (click)="storeName(name)"  routerLink="/result" [disabled]="name=='' || name==undefined" mat-raised-button class="w-50" color="primary">Enter</button>
+              </div>
+            </div>
+          </mat-card>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
